@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.sachika.amimono_counter",
+    "sha256_cert_fingerprints": [
+      "B5:57:2C:FF:A7:F2:A4:4D:83:84:E3:39:10:CA:42:0B:D3:77:88:38:08:03:5E:7D:D5:75:23:D8:89:86:ED:87"
+    ]
+  }
+}]
