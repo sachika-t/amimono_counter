@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>あみあみカウンター</title>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <h1>あみあみカウンター</h1>
+  <p class="subtitle">編み物段数カウンター</p>
+
+  <div class="setup">
+    <div class="setup-label">目標段数を設定する</div>
+    <div class="goal-row">
+      <input type="number" id="goalInput" min="1" placeholder="例：60" />
+      <label>段</label>
+    </div>
+  </div>
+
+  <div class="progress-wrap" id="progressWrap" style="display:none">
+    <div class="progress-meta">
+      <span id="progressText">0 / 0 段</span>
+      <span id="progressPct">0%</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+
+  <div class="complete-banner" id="completeBanner">
+    🎉 目標達成！おつかれさまでした
+  </div>
+
+  <div class="counter-card">
+    <div class="status-chip">編み終えた段数</div>
+    <div class="count-display" id="countDisplay">0</div>
+    <div class="count-label">だん</div>
+    <div class="next-row">
+      <span class="next-label">次に編むのは</span>
+      <span class="next-num" id="nextNum">第1段</span>
+    </div>
+  </div>
+
+  <button class="btn-main" id="btnCount" onclick="countUp()">
+    ✓ 1段目を編み終えた
+  </button>
+
+  <div class="btn-row">
+    <button class="btn-sub" onclick="countDown()">▲ 1段戻す</button>
+    <button class="btn-sub" onclick="setCount()">指定段へ</button>
+  </div>
+
+  <button class="btn-reset" onclick="resetCount()">リセット</button>
+
+  <div class="knit-deco">∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
